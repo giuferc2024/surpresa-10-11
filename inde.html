@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História</title>
+</head>
+<body>
+  <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #160e16;
+    color: #f8e8ef;
+    font-family: Georgia, serif;
+    text-align: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 60px 20px 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #e9a7c1;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.subtitle {
+    color: #d9b8c8;
+    font-style: italic;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.counter {
+    background: #291b29;
+    border: 1px solid #69455b;
+    border-radius: 20px;
+    padding: 30px 15px;
+    margin: 30px 0;
+}
+
+.counter h2 {
+    color: #e9a7c1;
+    margin-bottom: 15px;
+}
+
+#days {
+    font-size: 3rem;
+    color: #f4c5d8;
+}
+
+button {
+    background: #a85c7d;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    font-size: 1rem;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    margin: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d58aaa;
+    transform: scale(1.04);
+}
+
+.letter {
+    background: #f5e6ed;
+    color: #3c2533;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: none;
+    line-height: 1.9;
+    text-align: left;
+    animation: aparecer 0.7s ease;
+}
+
+.letter h2 {
+    text-align: center;
+    color: #a85c7d;
+    margin-bottom: 15px;
+}
+
+.surprise {
+    display: none;
+    margin-top: 25px;
+    color: #f4c5d8;
+    font-size: 1.3rem;
+    animation: aparecer 1s ease;
+}
+
+footer {
+    padding: 40px 20px;
+    color: #a98a9b;
+    font-size: 0.9rem;
+}
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    color: #d98baa;
+    animation: subir 6s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes subir {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+</head>
+
+
+<header>
+    <h1>Nosso pequeno universo ♡</h1>
+
+    <p class="subtitle">
+        Em um mundo tão grande, eu escolheria você
+        em todas as minhas vidas.
+    </p>
+</header>
+
+<main class="container">
+
+    <section class="counter">
+        <h2>Estamos juntos há...</h2>
+
+        <div id="days">0</div>
+        <p>dias de amor e sapekagens >p<. </p>
+
+        <p id="since"></p>
+    </section>
+
+    <section>
+        <p>
+           Você tem os olhos mais lindos que minha alma já viu... Já que os olhos são a janela da 
+        </p>
+
+        <button onclick="openLetter()">
+            Abrir cartinha ♡
+        </button>
+
+        <div class="letter" id="letter">
+            <h2>Para o meu amor</h2>
+
+            <p>
+                Meu amor,
+                <br><br>
+                Se eu pudesse guardar um momento
+                para sempre, escolheria qualquer
+                instante ao seu lado.
+                <br><br>
+                Gosto da maneira como você faz
+                os dias comuns se tornarem especiais.
+                Gosto das nossas conversas, dos
+                nossos abraços e de tudo aquilo
+                que só nós dois entendemos.
+                <br><br>
+                Não sei quantas páginas ainda
+                teremos para escrever, mas sei
+                que quero continuar descobrindo
+                cada uma delas com você.
+                <br><br>
+                Você é meu bebezinho,
+                meu lugar de paz e uma das
+                partes mais bonitas da minha vida.
+                <br><br>
+                Eu te amo. Hoje, amanhã e sempre.
+                <br><br>
+                Com amor,
+                <br>
+                Sua princesa ♡
+            </p>
+        </div>
+    </section>
+
+    
+      <section>
+    <h2 style="color: #e9a7c1; margin: 25px 0;">
+        Nossos momentos ♡
+    </h2>
+
+    <p>
+        Um pedacinho da nossa história.
+      
+    </p>
+
+    <div class="galeria">
+
+            <img src="img/1.webp"
+                 alt="Nosso primeiro encontro">
+
+            <img src="img/2.webp">
+
+            <img src="img/3.webp">
+
+            <img src="img/4.webp">
+                
+            
+             
+              <img src="img/6.webp">
+              
+              <img src="img/7.webp">
+
+              
+
+              <img src="img/9.webp">
+
+    
+
+              <img src="img/11.jpg">
+
+            
+        </div>
+
+
+    </div>
+
+    <button onclick="showSurprise()">
+        Uma última surpresa...
+    </button>
+
+    <div class="surprise" id="surprise">
+
+        <video controls playsinline
+        class="surpresa">
+    <source src="video/surpresa.mp4" type="video/mp4">
+
+    </video>
+
+    
+       <div class="surprise" id="surprise">
+        <inframe
+        class="surpresa"
+        src="https://drive.google.com/file/d/1gYtzMhJiKvOdRvsKGuRshwOuPsssdzto/view?usp=drive_link/preview"
+        allow="autoplay;fullscreen"
+        allowfullscreen>
+    </inframe>
+       </div>
+<h1> https://drive.google.com/file/d/1gYtzMhJiKvOdRvsKGuRshwOuPsssdzto/view?usp=drive_link</h1>
+
+    </div>
+</section>
+</main>
+
+<footer>
+    Feito com amor, especialmente para nós dois ♡
+</footer>
+
+<script>
+
+const inicioNamoro = new Date("2026-07-10T00:00:00");
+
+function atualizarContador() {
+    const agora = new Date();
+
+    const diferenca = agora - inicioNamoro;
+
+    const dias = Math.floor(
+        diferenca / (1000 * 60 * 60 * 24)
+    );
+
+    document.getElementById("days").textContent =
+        Math.max(0, dias);
+
+    document.getElementById("since").textContent =
+        "Desde " + inicioNamoro.toLocaleDateString(
+            "pt-BR",
+            {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+            }
+        );
+}
+
+function openLetter() {
+    const carta = document.getElementById("letter");
+
+    carta.style.display =
+        carta.style.display === "block"
+        ? "none"
+        : "block";
+}
+
+function showSurprise() {
+    const surpresa = document.getElementById("surprise");
+
+    surpresa.style.display = "block";
+}
+
+// Corações flutuantes
+
+function criarCoracao() {
+    const coracao = document.createElement("div");
+
+    coracao.className = "heart";
+    coracao.innerHTML = "♡";
+
+    coracao.style.left = Math.random() * 100 + "vw";
+    coracao.style.fontSize =
+        (Math.random() * 20 + 15) + "px";
+
+    coracao.style.animationDuration =
+        (Math.random() * 4 + 4) + "s";
+
+    document.body.appendChild(coracao);
+
+    setTimeout(() => {
+        coracao.remove();
+    }, 8000);
+}
+
+atualizarContador();
+
+setInterval(atualizarContador, 60000);
+
+setInterval(criarCoracao, 700);
+
+const track = 
+document.getElementById("carouselTrack");
+const carousel = 
+document.querySelector(".carousel");
+
+if (track && carousel) {
+    const fotos = track.querySelectorAll("img");
+    const dots = carousel.querySelectorAll(".carousel-dots span");
+
+    let indice = 0;
+
+    function mostrarFoto() {
+        const larguraFoto =
+        fotos[12].getBoundingClientRect().width;
+
+         const espaço = 12;
+        track.style.transform = `translateX(-${indice * (larguraFoto + espaço)}px)`;
+
+        dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === indice);
+        });
+    }
+
+    function proximaFoto() {
+        indice = (indice + 1) % fotos.length;
+        mostrarFoto();
+    }
+
+    setInterval(proximaFoto, 3500);
+}
+
+</script>  
+</body>
+</html>
